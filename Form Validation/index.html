@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form  method="get" class="form-example" novalidate>
+            <div class="form-example">
+              <label for="email">Email: </label>
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div class="form-example">
+              <label for="country">Country: </label>
+              <input type="text" name="country" id="country" required />
+            </div>
+            <div class="form-example">
+              <label for="pincode">Pincode: </label>
+              <input type="number" name="pincode" id="pincode" required />
+            </div>
+            <div class="form-example">
+              <label for="password">Password: </label>
+              <input type="password" name="password" id="password" required />
+            </div>
+            <div class="form-example">
+              <button class="button"  onclick="">Submit</button>
+            </div>
+          </form>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
