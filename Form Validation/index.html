@@ -8,30 +8,32 @@
 </head>
 <body>
     <div class="container">
-        <form  method="get" class="form-example" novalidate>
+        <form method="get" class="form-example" novalidate onsubmit="return pressed()">
             <div class="form-example">
               <label for="email">Email: </label>
               <input type="email" name="email" id="email" required />
+              <p id="e_valid"></p>
             </div>
             <div class="form-example">
               <label for="country">Country: </label>
               <input type="text" name="country" id="country" required />
+              <p id="c_valid"></p>
             </div>
             <div class="form-example">
               <label for="pincode">Pincode: </label>
               <input type="number" name="pincode" id="pincode" required />
+              <p id="pin_valid"></p>
             </div>
             <div class="form-example">
               <label for="password">Password: </label>
               <input type="password" name="password" id="password" required />
+              <p id="pas_valid"></p>
             </div>
             <div class="form-example">
-              <button class="button"  onclick="">Submit</button>
+              <button class="button" type="submit">Submit</button>
             </div>
           </form>
     </div>
-
-
     <script src="script.js"></script>
 </body>
 </html>
