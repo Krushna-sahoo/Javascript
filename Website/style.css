@@ -93,7 +93,13 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: scale(0);
     overflow: hidden;
+    transition: transform .5s ease,height .2s ease;
+}
+
+.wrapper.active_popup{
+    transform: scale(1);
 }
 
 .wrapper .close_icon{
@@ -113,12 +119,42 @@ header{
     z-index: 1;
 }
 
+.wrapper.active{
+    height: 450px;
+}
+
 .wrapper .login-form{
     width: 100%;
     padding:40px ;
+    transition: transform .18s ease;
+    transform:translateX(0) ;
+}
+
+.wrapper.active .login-form{
+    transition: none;
+    transform: translateX(-400px);
 }
 
 .login-form h2{
+    font-size: 2em;
+    color:#162938 ;
+    text-align: center;
+}
+
+.wrapper .registration-form{
+    width: 100%;
+    padding:40px ;
+    position: absolute;
+    transform: translateX(400px);
+    transition: none;
+}
+
+.wrapper.active .registration-form{
+    transition: transform .18s ease;
+    transform:translateX(0) ;
+}
+
+.registration-form h2{
     font-size: 2em;
     color:#162938 ;
     text-align: center;
